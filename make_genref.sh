@@ -137,8 +137,8 @@ sort  -k 1,1n -k 3,3n -k 2,2 _tmp_ > _tmp2_
 
 # Magic file: intergenic flag, see comments in the original reference how this 
 # flag was generated
-cmp <(cut -f2 <(tail -n+2 _tmp2_ )) <(cut -f1 <(tail -n+2 <(gunzip -c magic_intergenic.txt.gz))) && \
-paste _tmp2_ <(cut -f2 <(gunzip -c magic_intergenic.txt.gz)) > all_chr_9524.ref || \
+cmp <(cut -f2 <(tail -n+2 _tmp2_ )) <(cut -f1 <(tail -n+2 <(pigz -cd magic_intergenic.txt.gz))) && \
+paste _tmp2_ <(cut -f2 <(pigz -cd magic_intergenic.txt.gz)) > all_chr_9524.ref || \
 echo key mismatch
 rm _tmp_ _tmp2_
 
