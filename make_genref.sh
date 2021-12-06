@@ -98,7 +98,6 @@ rm ${RAW_DIR}/genref_rawdata.zip
 [ ! -d ${CHR_DIR} ]  && mkdir ${CHR_DIR}
 
 # Extract the duplicated variants for all 22 chromosomes
-# The generated dup files all contain exactly two bytes "." - MISSING rsIDs, sigh
 seq 22 | parallel --jobs ${n_jobs} "zgrep -v '^#' ${RAW_DIR}/ALL.chr{}.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz"\
 " | cut -f3 | sort | uniq -d > ${CHR_DIR}/chr{}.dups"
 
