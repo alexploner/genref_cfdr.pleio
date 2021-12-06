@@ -68,7 +68,7 @@ set -euxo pipefail
 
 # Set number of jobs / threads used with parallel and plink
 # See man parallel for details
-export n_jobs=11 ## Use 'export' instead of 'local' if running c&p on the command line
+export n_jobs=`(echo \`nproc\` - 1) | bc` 
 
 # Set directories
 export RAW_DIR="./raw"
