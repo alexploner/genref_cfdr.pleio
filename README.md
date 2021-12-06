@@ -1,13 +1,13 @@
 ## Summary
 
 This is a combination of two scripts (one shell, one R) and an auxiliary data file that can generate 
-the genomic reference data required for calculating conditional and conunctional false discovery rates 
+the genomic reference data required for calculating conditional and conjunctional false discovery rates 
 based on pleiotropic GWAS results. The result files are in R's compressed binary `.RData` format and
 intended for use with the R package `cfdr.pleio`.
 
 NOTE: this is only provided to allow replication and modification of the reference data. If you just want to
 run `cfdr.pleio`, you can use the the preprocessed, ready-to-use version of the data available from
-[https://zenodo.org/record/5750318/files/genref.zip](https://zenodo.org/record/5750318/files/genref.zip)
+https://zenodo.org/record/5750318/files/genref.zip
 
 ## Installation
 
@@ -50,7 +50,7 @@ the data generation process, this is all you need to keep for e.g. working with 
 
     * GNU coreutils and utilities `parallel`, `wget`, `zgrep` and `unzip` 
     * `awk`
-    * `pigz (replace with `gzip` in `make_genref.sh` if not available)
+    * `pigz`
 
 
 ## Credit
@@ -59,12 +59,12 @@ This code is based on a fork (in February 2021) of the pre-processing code given
 
 https://precimed.s3-eu-west-1.amazonaws.com/pleiofdr/about.txt
 
-which is part  current repository for the original matlab implementation
-of the conditional & conjunctional FDR at 
+which is part  of the original matlab implementation of the conditional & conjunctional 
+FDR at 
 
 https://github.com/precimed/pleiofdr
 
-For more backgroun on theory and application of conditional & conjuncational FDR in
-a pleiotropy setting, see [Andreassen et al (2013)](https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23375658/)
+For more background on theory and application of conditional & conjuncational FDR in
+a pleiotropy setting, see https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/23375658/
 
 
