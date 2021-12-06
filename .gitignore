@@ -1,0 +1,7 @@
+raw/*
+bindata/*
+r2data/*
+chrdata/*
+log/*
+*.zip
+magic_intergenic.txt
